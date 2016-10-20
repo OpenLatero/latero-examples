@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tactilelabs/Git/OpenLatero/latero-examples/Example1/main.cpp
+latero/tactiledisplay.h
+-
+
+/usr/local/include/latero/point.h
+math.h
+-
+
+/usr/local/include/latero/tactiledisplay.h
+tactileimg.h
+/usr/local/include/latero/tactileimg.h
+point.h
+/usr/local/include/latero/point.h
+boost/date_time/posix_time/posix_time_types.hpp
+-
+tl-latero/latero.h
+/usr/local/include/latero/tl-latero/latero.h
+queue
+-
+
+/usr/local/include/latero/tactileimg.h
+assert.h
+/usr/local/include/latero/assert.h
+vector
+-
+
+/usr/local/include/latero/tl-latero/latero.h
+netinet/in.h
+-
+latero_io.h
+/usr/local/include/latero/tl-latero/latero_io.h
+
+/usr/local/include/latero/tl-latero/latero_io.h
+stdint.h
+-
+
