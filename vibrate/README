@@ -7,7 +7,7 @@ LINUX
 
 Tested on Ubuntu 16.04 LTS.
 
-1. Install the Latero library. (See http://github.com/OpenLatero/latero.)
+1. Install the Latero library. (see http://github.com/OpenLatero/latero)
 
 2. Compile the example:
 >> cmake .
