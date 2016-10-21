@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 2.8)
 Project(latero-example-vibrate)
 
+# add /usr/loca/lib/pkgconfig (necessary on macOS)
+set( ENV{PKG_CONFIG_PATH} "$ENV{PKG_CONFIG_PATH}:/usr/local/lib/pkgconfig" )
+
 include(FindPkgConfig)
 
 pkg_check_modules (LATERO latero)
