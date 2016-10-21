@@ -6,6 +6,7 @@ include(FindPkgConfig)
 pkg_check_modules (LATERO latero)
 link_directories(${LATERO_LIBRARY_DIRS})
 include_directories(${LATERO_INCLUDE_DIRS})
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${LATERO_CFLAGS}")
 
 set(prog_SRCS main.cpp)
 
