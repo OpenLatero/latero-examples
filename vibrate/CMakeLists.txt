@@ -6,14 +6,15 @@ set( ENV{PKG_CONFIG_PATH} "$ENV{PKG_CONFIG_PATH}:/usr/local/lib/pkgconfig" )
 
 include(FindPkgConfig)
 
-pkg_check_modules (LATERO latero)
-link_directories(${LATERO_LIBRARY_DIRS})
-include_directories(${LATERO_INCLUDE_DIRS})
+#pkg_check_modules (LATERO latero)
+#link_directories(${LATERO_LIBRARY_DIRS})
+#include_directories(${LATERO_INCLUDE_DIRS})
+find_package(latero REQUIRED)
 
 # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${LATERO_CFLAGS}")
 
 set(prog_SRCS main.cpp)
 
 add_executable(latero-example-vibrate ${prog_SRCS})
-target_link_libraries(latero-example-vibrate ${LATERO_LIBRARIES})
+target_link_libraries(latero-example-vibrate latero::latero)
 install_programs(/bin latero-example-vibrate)
