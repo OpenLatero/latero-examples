@@ -26,7 +26,6 @@ double ComputePinPosition(unsigned int x, unsigned int y, boost::posix_time::tim
     return v;
 }
 
-
 int main(int argc, char* argv[])
 {
     // Create a latero::TactileDisplay object that will be used to communicate with the Latero.
