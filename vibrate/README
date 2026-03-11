@@ -17,16 +17,19 @@ Tested on Ubuntu 16.04 LTS.
 >> ./latero-example-vibrate
 
 
-MACOS
+MacOS
 *****
 
-1. Install the Latero library. (see http://github.com/OpenLatero/latero)
+Tested on MacOS Tahoe 26.3.1.
 
-2. Compile the example:
->> mkdir build
->> cd build
->> cmake ..
->> make
+Install the latero library.
 
-3. Run the example:
->> ./latero-example-vibrate
+Install dependencies
+>> sudo port install gtkmm3 +quartz
+
+Build the app
+>> cmake -B build
+>> cmake --build build
+
+Run the app
+>> build/latero-example-vibrate
