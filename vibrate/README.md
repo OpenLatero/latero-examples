@@ -8,7 +8,10 @@ Tested on MacOS Tahoe 26.3.1.
 
 Install the latero library.
 
-Install dependencies:
+#### Install dependencies
+
+The dependencies can be installed through [MacPorts](https://www.macports.org) with the following command:
+
 ```
 sudo port install gtkmm3 +quartz
 ```
