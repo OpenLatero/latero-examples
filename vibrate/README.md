@@ -4,9 +4,9 @@ This example shows the use of the Latero library to make the pins of the Latero 
 
 ## MacOS
 
-Tested on MacOS Tahoe 26.3.1.
+#### Install OpenLatero libraries
 
-Install the latero library.
+Install the [latero](https://github.com/OpenLatero/latero) library.
 
 #### Build and run the app
 
