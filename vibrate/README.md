@@ -8,24 +8,27 @@ Tested on MacOS Tahoe 26.3.1.
 
 Install the latero library.
 
-#### Install dependencies
+#### Build and run the app
 
-The dependencies can be installed through [MacPorts](https://www.macports.org) with the following command:
+The app can be compiled with the following commands:
 
-```
-sudo port install gtkmm3 +quartz
-```
-
-Build the app:
 ```
 cmake -B build
 cmake --build build
 ```
 
-Run the app:
+and ran with this command:
+
 ```
 build/latero-example-vibrate
 ```
+
+or in a single command:
+
+```
+cmake -B build && cmake --build build && build/latero-example-vibrate
+```
+
 
 ## Linux
 
