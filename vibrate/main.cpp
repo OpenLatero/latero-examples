@@ -31,13 +31,13 @@ int main(int argc, char* argv[])
     latero::TactileDisplay* dev = new latero::TactileDisplay();
     
     // Note the start time using std::chrono.
-    std::chrono::steady_clock::time_point startTimeStd = std::chrono::steady_clock::now();
+    std::chrono::steady_clock::time_point startTime = std::chrono::steady_clock::now();
 
     // Note the time elapsed since start time.
-    std::chrono::steady_clock::duration currentTimeStd = std::chrono::steady_clock::now() - startTimeStd;
+    std::chrono::steady_clock::duration currentTime = std::chrono::steady_clock::now() - startTime;
 
     // Run for one minute.
-    while (currentTimeStd < std::chrono::minutes(1))
+    while (currentTime < std::chrono::minutes(1))
     {
         // Query the device for the size of a frame (number of pins).
         uint sx = dev->GetFrameSizeX();
@@ -50,7 +50,7 @@ int main(int argc, char* argv[])
         
         // For each pin, call a function that will compute the position of the pin based on the
         // pin (x, y) and the current time.
-        double currentTimeSeconds = std::chrono::duration<double>(currentTimeStd).count();
+        double currentTimeSeconds = std::chrono::duration<double>(currentTime).count();
         for (uint y=0; y<sy; ++y)
         {
             for (uint x=0; x<sx; ++x)
@@ -64,7 +64,7 @@ int main(int argc, char* argv[])
         dev->WriteFrame(img);
         
         // Update the current time.
-        currentTimeStd = std::chrono::steady_clock::now() - startTimeStd;
+        currentTime = std::chrono::steady_clock::now() - startTime;
     }
 
     // Delete the Tactile Display. This will close the connection to the device.
