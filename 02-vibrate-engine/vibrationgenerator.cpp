@@ -30,5 +30,6 @@ void VibrationGenerator::DoRender_(const latero::graphics::State *state, latero:
 		}
 	}
 
+	// We used a RangeImg, so we now convert it to the expected BiasedImg.
 	frame.ConvertFromRange(img);
 }
