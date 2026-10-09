@@ -17,7 +17,7 @@ cmake -B build
 cmake --build build
 ```
 
-and ran with this command:
+and run with this command:
 
 ```
 build/latero-example-vibrate-engine
@@ -31,4 +31,4 @@ cmake -B build && cmake --build build && build/latero-example-vibrate-engine
 
 ## Authors
 
-OpenLatero is maintained by [Vincent Levesque](https://vlevesque.com) and his Haptic User Experience research group at [École de technologie supérieure](https://etsmtl.ca). It was originally developped as part of his PhD thesis at [McGill University](https://mcgill.ca) and prepared for release as as open source project by Jerome Pasquero (<jerome.pasquero@gmail.com>). Please see the git history for a full list of contributors.
+OpenLatero is maintained by [Vincent Levesque](https://vlevesque.com) and his Haptic User Experience research group at [École de technologie supérieure](https://etsmtl.ca). It was originally developed as part of his PhD thesis at [McGill University](https://mcgill.ca) and prepared for release as an open source project by Jerome Pasquero (<jerome.pasquero@gmail.com>). Please see the git history for a full list of contributors.

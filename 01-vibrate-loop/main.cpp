@@ -1,5 +1,6 @@
 #include <latero/tactiledisplay.h>
 #include <chrono>
+#include <cmath>
 
 
 /**
@@ -28,7 +29,8 @@ double ComputePinPosition(unsigned int x, unsigned int y, double t)
 int main(int argc, char* argv[])
 {
     // Create a latero::TactileDisplay object that will be used to communicate with the Latero.
-    latero::TactileDisplay* dev = new latero::TactileDisplay();
+    // The connection is closed automatically when dev goes out of scope at the end of main().
+    latero::TactileDisplay dev;
     
     // Note the start time using std::chrono.
     std::chrono::steady_clock::time_point startTime = std::chrono::steady_clock::now();
@@ -40,8 +42,8 @@ int main(int argc, char* argv[])
     while (currentTime < std::chrono::minutes(1))
     {
         // Query the device for the size of a frame (number of pins).
-        uint sx = dev->GetFrameSizeX();
-        uint sy = dev->GetFrameSizeY();
+        uint sx = dev.GetFrameSizeX();
+        uint sy = dev.GetFrameSizeY();
         
         // Create a tactile image that will specify the position of each pin. The RangeImg
         // uses a value between -1.0 (left) and +1.0 (right) to specify the position of a pin.
@@ -61,14 +63,11 @@ int main(int argc, char* argv[])
         }
         
         // Send the tactile image to the device.
-        dev->WriteFrame(img);
-        
+        dev.WriteFrame(img);
+
         // Update the current time.
         currentTime = std::chrono::steady_clock::now() - startTime;
     }
 
-    // Delete the Tactile Display. This will close the connection to the device.
-    delete dev;
-    
     return 0;
 };
