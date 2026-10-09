@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10...3.31)
 Project(latero-example-vibrate-engine)
 
-find_package(laterographics)
+find_package(laterographics REQUIRED)
 
 set(latero_demo_SRCS
     vibrationgenerator.h
