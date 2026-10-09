@@ -1,4 +1,4 @@
-# LATERO-EXAMPLE-VIBRATE
+# LATERO-EXAMPLE-VIBRATE-LOOP
 
 This example shows the use of the Latero library to make the pins of the Latero tactile display vibrate. The pins vibrate at 1 Hz with adjacent row having a different phase.
 
@@ -20,13 +20,13 @@ cmake --build build
 and ran with this command:
 
 ```
-build/latero-example-vibrate
+build/latero-example-vibrate-loop
 ```
 
 or in a single command:
 
 ```
-cmake -B build && cmake --build build && build/latero-example-vibrate
+cmake -B build && cmake --build build && build/latero-example-vibrate-loop
 ```
 
 
@@ -44,5 +44,5 @@ make
 
 3. Run the example:
 ```
-./latero-example-vibrate
+./latero-example-vibrate-loop
 ```
