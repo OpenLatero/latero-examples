@@ -1,7 +1,6 @@
 # LATERO-GRAPHICS-EXAMPLE-VIBRATE-GUI
 
-This example extends latero-example-vibrate-engine by adding a GUI with a custom widget for the VibrationGenerator
-and a latero::graphics::TactileDisplayView that shows the movement of the Latero's pins.
+This example extends 02-vibrate-engine by adding a GUI with a custom widget for the VibrationGenerator and a latero::graphics::TactileDisplayView that shows the movement of the Latero's pins.
 
 ## MacOS
 

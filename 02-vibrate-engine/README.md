@@ -1,6 +1,6 @@
 # LATERO-GRAPHICS-EXAMPLE-VIBRATE
 
-This example replicates [latero-example-vibrate](https://github.com/OpenLatero/latero-examples/tree/master/vibrate) using latero::graphics::Generator and latero::graphics::TactileEngine.
+This example replicates example 01-vibrate-loop using latero::graphics::Generator and latero::graphics::TactileEngine.
 
 ## MacOS
 
