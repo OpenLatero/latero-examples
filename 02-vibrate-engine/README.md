@@ -1,4 +1,4 @@
-# LATERO-GRAPHICS-EXAMPLE-VIBRATE
+# 02-VIBRATE-ENGINE
 
 This example replicates example 01-vibrate-loop using latero::graphics::Generator and latero::graphics::TactileEngine.
 
@@ -20,13 +20,13 @@ cmake --build build
 and ran with this command:
 
 ```
-build/src/latero-example-vibrate-engine
+build/latero-example-vibrate-engine
 ```
 
 or in a single command:
 
 ```
-cmake -B build && cmake --build build && build/src/latero-example-vibrate-engine
+cmake -B build && cmake --build build && build/latero-example-vibrate-engine
 ```
 
 ## Authors

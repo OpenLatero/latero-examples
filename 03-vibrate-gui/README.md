@@ -1,4 +1,4 @@
-# LATERO-GRAPHICS-EXAMPLE-VIBRATE-GUI
+# 03-VIBRATE-GUI
 
 This example extends 02-vibrate-engine by adding a GUI with a custom widget for the VibrationGenerator and a latero::graphics::TactileDisplayView that shows the movement of the Latero's pins.
 
@@ -20,13 +20,13 @@ cmake --build build
 and ran with this command:
 
 ```
-build/src/latero-example-vibrate-gui
+build/latero-example-vibrate-gui
 ```
 
 or in a single command:
 
 ```
-cmake -B build && cmake --build build && build/src/latero-example-vibrate-gui
+cmake -B build && cmake --build build && build/latero-example-vibrate-gui
 ```
 
 ## Authors
