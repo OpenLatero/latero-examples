@@ -9,6 +9,8 @@ VibrationGeneratorWidget::VibrationGeneratorWidget(VibrationGeneratorPtr peer) :
 	auto label = Gtk::make_managed<Gtk::Label>("Frequency (Hz)");
 	append(*label);
 
+	// Initialize the Gtk::Adjustment with the VibrationGenerator's frequency. The thread-safe GetFrequency() is used since 
+	// we have two threads: GUI and TactileEngine.
 	adj_ = Gtk::Adjustment::create(peer_->GetFrequency(), 0.0, 200.0, 0.1, 10.0);
 	adj_->signal_value_changed().connect(sigc::mem_fun(*this, &VibrationGeneratorWidget::OnChanged));
 
@@ -18,5 +20,6 @@ VibrationGeneratorWidget::VibrationGeneratorWidget(VibrationGeneratorPtr peer) :
 
 void VibrationGeneratorWidget::OnChanged()
 {
+	// Update the VibrationGenerator's frequency using the thread-safe SetFrequency().
 	peer_->SetFrequency(adj_->get_value());
 }

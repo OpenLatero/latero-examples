@@ -9,6 +9,7 @@ class VibrationGenerator : public latero::graphics::Generator
 public:
 	static VibrationGeneratorPtr Create(const latero::Tactograph *dev);
 
+	// This method creates the custom VibrationGeneratorWidget associated with VibrationGenerator.
 	virtual Gtk::Widget *CreateWidget(latero::graphics::GeneratorPtr ptr);
 
 	inline double GetFrequency() const { LATERO_GRAPHICS_GUARD; return GetFrequency_(); }

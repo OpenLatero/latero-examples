@@ -8,10 +8,10 @@ MainWindow::MainWindow(const latero::Tactograph *dev, latero::graphics::Generato
 
 	auto box = Gtk::make_managed<Gtk::Box>(Gtk::Orientation::VERTICAL);
 	set_child(*box);
-	box->append(preview_);
-	box->append(*widget);
+	box->append(preview_); // visual representation of the Latero's pins
+	box->append(*widget); // widget for our custom Generator
 
-	preview_.SetGenerator(gen);
+	preview_.SetGenerator(gen); // Once preview_ is given the Generator, it updates its display automatically.
 
 	set_title("Latero Graphics Example");
 	set_size_request(1000,800);
