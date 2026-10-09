@@ -9,9 +9,9 @@ class VibrationGenerator : public latero::graphics::Generator
 public:
 	static VibrationGeneratorPtr Create(const latero::Tactograph *dev);
 
-    inline double GetFrequency() const { LATERO_GRAPHICS_GUARD; return GetFrequency_(); }
+	inline double GetFrequency() const { LATERO_GRAPHICS_GUARD; return GetFrequency_(); }
 	inline double GetFrequency_() const { return frequency_; }
-    inline void SetFrequency(double f) { LATERO_GRAPHICS_GUARD; SetFrequency_(f); SetLastModified_(); }
+	inline void SetFrequency(double f) { LATERO_GRAPHICS_GUARD; SetFrequency_(f); SetLastModified_(); }
 	inline void SetFrequency_(double f) { frequency_ = f; }
 
 protected:

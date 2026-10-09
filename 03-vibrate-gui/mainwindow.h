@@ -7,8 +7,8 @@
 class MainWindow : public Gtk::ApplicationWindow
 {
 public:
-    MainWindow(const latero::Tactograph *dev, latero::graphics::GeneratorPtr gen);
-    virtual ~MainWindow();
+	MainWindow(const latero::Tactograph *dev, latero::graphics::GeneratorPtr gen);
+	virtual ~MainWindow();
 
 protected:
 	latero::graphics::TactileDisplayView preview_;
