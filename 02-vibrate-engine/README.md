@@ -2,7 +2,7 @@
 
 This example replicates example 01-vibrate-loop using latero::graphics::Generator and latero::graphics::TactileEngine.
 
-## MacOS
+## MacOS / Linux
 
 #### Install OpenLatero libraries
 
